@@ -1,0 +1,286 @@
+.createAccount  {
+    background-color: rgb(102, 106, 103);
+    color: white;
+    height: 100px;
+    width: 110px;
+    border-style: groove;
+    cursor: pointer;
+}
+
+/*----------------------------------------*/
+/*Type of account button */
+.typeOfAccount {
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin-bottom: 10px;
+}
+.typeOfAccount:hover {
+    background-color: black;
+    color: white;
+}
+.typeOfAccount:active {
+    background-color: rgb(33, 30, 30);
+}
+/*----------------------------------------*/
+
+#flexContainer {
+    display: flex;
+    align-items: flex-start;
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    justify-content: space-between; /* Evenly distribute the buttons */
+    height: 100px; /* Match the height of the .typeOfAccount button */
+    margin-left: 10px;
+}
+.buttonContainerButton:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.buttonContainerButton:active {
+    background-color: rgb(33, 30, 30);
+}
+
+.clicked{
+    background-color: darkseagreen;
+}
+
+#mainContainer {
+    display: flex;
+    align-items: flex-start;
+}
+
+#inputContainer {
+    display: flex;
+    flex-direction: row; /* Change this from column to row */
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+#accountTypeContainer {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center the elements horizontally */
+}
+
+#titleContainer, #submitContainer, #confirmContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Add this line */
+    margin-left: 10px;
+}
+
+#tAccountContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px; /* Adjust the margin to accommodate the clear button */
+}
+
+
+.submitButton {
+    margin-top: 10px; /* Adjust this value as needed */
+    cursor: pointer;
+}
+
+.confirmButton {
+    margin-top: 10px; /* Adjust this value as needed */
+    /* Add your styles here. For example: */
+  
+    height: 50px;
+    width: 100px;
+    border-style: groove;
+    cursor: pointer;
+}
+
+.clear{
+    width: 100px;
+    display: block; /* Ensure clear button is displayed */
+    cursor: pointer;
+}
+
+.clear:hover{
+    background-color: red;
+    color: white;
+}
+
+.disabled-button {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5; /* Optionally reduce opacity for disabled buttons */
+}
+
+
+
+
+/* Add vertical divider */
+#tAccountContainer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-top: 1px solid black;
+}
+#tAccountContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(33.33% - 1px);
+    border-left: 1px solid black;
+}
+#assetsContainer::before { /* Add divider to the left of Assets */
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: calc(100% - 1px);
+    border-left: 1px solid black;
+}
+#liabilitiesContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(66.66% - 1px);
+    border-left: 1px solid black;
+}
+#equitiesContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(100% - 1px);
+    border-left: 1px solid black;
+}
+
+/* Adjust width of containers */
+#assetsContainer,
+#equitiesContainer {
+    width: calc(33.33% - 1px);
+}
+
+
+.account {
+ 
+    padding: 10px; /* Add some padding for spacing */
+    margin-bottom: 10px; /* Add margin between accounts */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.account-title {
+    font-weight: bold; /* Make the title bold */
+    margin-bottom: 0px;
+ 
+}
+
+.account-line {
+    width: 1px; /* Set the width of the vertical line */
+    height: 100%; /* Set the height of the vertical line */
+    background-color: black; /* Set the color of the vertical line */
+    margin-right: 5px; /* Add space between the line and the text */
+}
+
+
+.debit-credit-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.border-line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-top: 10px; /* Adjust as needed for spacing */
+    margin-bottom: 10px; /* Adjust as needed for spacing */
+}
+
+
+
+.account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.debit-credit-container {
+    display: flex;
+    border-top: 1px solid black;
+    position: relative; /* Add position relative to the container */
+}
+
+/* Add vertical divider */
+.debit-credit-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Position it in the center */
+    border-left: 1px solid black; /* Add vertical line */
+}
+
+
+.debit-credit-section {
+    flex: 1;
+    margin: 0 20px; /* Adjust as needed */
+}
+
+.new-debit-button,
+.new-credit-button {
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    white-space: nowrap; /* Prevent text wrap */
+    margin-bottom: 5px; /* Adjust margin as needed */
+}
+
+.total-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px; /* Adjust as needed */
+}
+
+.total {
+    margin-top: 5px; /* Adjust as needed */
+}
+
+.total-heading {
+    margin-bottom: 5px; /* Adjust as needed */
+}
+
+.totalAssets{
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+.totalLiabilities{
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+.totalEquities{
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+body {
+    background-color: slategray;
+}
